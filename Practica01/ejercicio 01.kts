@@ -34,6 +34,7 @@ fun main() {
     if (salario == null || salario <= 0) {
         println("Salario inválido")
         return
+
     }
 
     val nivel = obtenerNivelRendimiento(puntuacion)

@@ -1,3 +1,14 @@
+/*
+Descripción: Crear un programa que, basándose en la puntuación de evaluación de un empleado (de 0 a 10)
+y su salario mensual, determine su nivel de rendimiento (Inaceptable, Aceptable o Meritorio)
+y se pueda calcular la cantidad de dinero que recibirá. La cantidad se obtiene multiplicando el
+salario por el porcentaje de la puntuación sobre 10.
+
+Autor: Marycielo Bedoya Pinto
+Fecha de creación: 24/08/24
+Fecha de ultima modificación:*/
+
+
 fun obtenerNivelRendimiento(puntuacion: Int): String {
     return when (puntuacion) {
         in 0..3 -> "Inaceptable"
@@ -5,6 +16,9 @@ fun obtenerNivelRendimiento(puntuacion: Int): String {
         in 7..10 -> "Meritorio"
         else -> "Puntuación inválida"
     }
+}
+fun calcularDinero(puntuacion: Int, salario: Int): Int {
+    return salario * (puntuacion / 10)
 }
 
 fun main() {

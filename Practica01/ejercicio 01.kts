@@ -17,9 +17,10 @@ fun obtenerNivelRendimiento(puntuacion: Int): String {
         else -> "Puntuación inválida"
     }
 }
-fun calcularDinero(puntuacion: Int, salario: Int): Int {
-    return salario * (puntuacion / 10)
+fun calcularDinero(puntuacion: Int, salario: Int): Double {
+    return salario * (puntuacion / 10.0)
 }
+
 
 fun main() {
     println("Ingrese su puntuación: ")

@@ -6,7 +6,7 @@ salario por el porcentaje de la puntuación sobre 10.
 
 Autor: Marycielo Bedoya Pinto
 Fecha de creación: 24/08/24
-Fecha de ultima modificación: 24/08/24 23:38 */
+Fecha de ultima modificación: 24/08/24 23:38*/
 
 fun obtenerNivelRendimiento(puntuacion: Int): String {
     return when (puntuacion) {

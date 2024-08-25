@@ -9,33 +9,51 @@ Fecha de ultima modificación:*/
 import kotlin.random.Random
 
 fun main() {
-    // aqui daremos inicio al juego llamando a la función playGame.
+    // aqui iniciams el juego llamando a la función playGame.
     playGame()
 }
 
 fun playGame() {
-    // obtienemos la elección aleatoria de la computadora.
+    // obtenemos la elección aleatoria de la computadora.
     val computerChoice = getComputerChoice()
-    // aqui se pide que el usuario ingrese su elección.
+    // solicitamos al usuario que ingrese su elección.
     val userChoice = getUserChoice()
 
     // Se muestra la elección de la computadora y del usuario.
     println("Computer chose: $computerChoice")
     println("You chose: $userChoice")
+
+    // Se determina el ganador según las reglas del juego.
+    determineWinner(computerChoice, userChoice)
 }
 
 fun getComputerChoice(): String {
-    // definimos un arreglo con las opciones disponibles
+    // definimos un arreglo con las opciones disponibles.
     val choices = arrayOf("Piedra", "Papel", "Tijera")
     // seleccionamos una opción aleatoria para la computadora.
     return choices[Random.nextInt(choices.size)]
 }
 
 fun getUserChoice(): String {
-    // Se pide al usuario ingresar su elección.
+    // Se pide al usuario que ingrese su elección.
     println("Elige Piedra, Papel o Tijera:")
     // el readln() obtiene la entrada del usuario desde la consola.
     return readln()
 }
+
+fun determineWinner(computerChoice: String, userChoice: String) {
+    // Comparación de elecciones para determinar el ganador.
+    if (computerChoice == userChoice) {
+        println("Empate!")
+    } else if ((computerChoice == "Piedra" && userChoice == "Tijera") ||
+        (computerChoice == "Tijera" && userChoice == "Papel") ||
+        (computerChoice == "Papel" && userChoice == "Piedra")) {
+
+        println("¡Ganaste!")
+    } else {
+        println("¡Perdiste!")
+    }
+}
+
 
 

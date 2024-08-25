@@ -8,7 +8,6 @@ Autor: Marycielo Bedoya Pinto
 Fecha de creación: 24/08/24
 Fecha de ultima modificación:*/
 
-
 fun obtenerNivelRendimiento(puntuacion: Int): String {
     return when (puntuacion) {
         in 0..3 -> "Inaceptable"
@@ -17,10 +16,10 @@ fun obtenerNivelRendimiento(puntuacion: Int): String {
         else -> "Puntuación inválida"
     }
 }
+
 fun calcularDinero(puntuacion: Int, salario: Int): Double {
     return salario * (puntuacion / 10.0)
 }
-
 
 fun main() {
     println("Ingrese su puntuación: ")
@@ -35,7 +34,6 @@ fun main() {
     if (salario == null || salario <= 0) {
         println("Salario inválido")
         return
-
     }
 
     val nivel = obtenerNivelRendimiento(puntuacion)

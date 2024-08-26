@@ -26,7 +26,7 @@ fun jugar() {
             adivinado = true
         } else {
             if (intento > numeroSecreto) {
-                println("El número secreto es mayor.")
+                println("El número secreto es menor.")
             } else {
                 println("El número secreto es mayor.")
             }

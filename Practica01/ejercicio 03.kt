@@ -3,7 +3,7 @@ suma, resta, multiplicación, división. Debe imprimir
 un menú con las opciones incluyendo una opción salir.
 Autor: Marycielo Bedoya Pinto
 Fecha de creación: 25/08/2024
-Fecha de ultima modificación:
+Fecha de ultima modificación: 25/08/2024 23:21
  */
 fun mostrarMenu() {
     while (true) {

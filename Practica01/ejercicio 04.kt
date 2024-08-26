@@ -25,8 +25,11 @@ fun jugar() {
             println("¡Felicitaciones! Adivinaste el número.")
             adivinado = true
         } else {
-            println("Intento incorrecto.")
+            if (intento > numeroSecreto) {
+                println("El número secreto es mayor.")
+            } else {
+                println("El número secreto es mayor.")
+            }
         }
     }
 }
-

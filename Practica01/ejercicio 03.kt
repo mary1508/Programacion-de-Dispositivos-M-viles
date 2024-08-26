@@ -16,9 +16,13 @@ fun mostrarMenu() {
         println("5. Salir")
         println("Selecciona una opción:")
 
-        // con esto podremos tomar el dato que el usuario ingresará
-        val opcion = readln().toInt()
-
+        //agregando un manejo de error
+        val opcion = try {
+            readln().toInt()
+        } catch (e: NumberFormatException) {
+            println("Por favor, ingresa un número válido.")
+            continue
+        }
         // esto es para ejecutar la opción seleccionada.
         when (opcion) {
             1 -> realizarSuma()
@@ -75,4 +79,5 @@ fun realizarDivision() {
 }
 
 fun main(){
+    mostrarMenu()
 }

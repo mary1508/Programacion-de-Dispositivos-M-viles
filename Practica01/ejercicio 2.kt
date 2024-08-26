@@ -42,12 +42,20 @@ fun getUserChoice(): String {
 }
 
 fun determineWinner(computerChoice: String, userChoice: String) {
-    // Comparación de elecciones para determinar el ganador.
     if (computerChoice == userChoice) {
+        // Si la elección de la computadora y el usuario es la misma, es un empate.
         println("Empate!")
     } else if ((computerChoice == "Piedra" && userChoice == "Tijera") ||
         (computerChoice == "Tijera" && userChoice == "Papel") ||
-        (computerChoice == "
+        (computerChoice == "Papel" && userChoice == "Piedra")) {
+        // Si la elección de la computadora vence a la del usuario según las reglas del juego,
+        // entonces la computadora gana y el usuario pierde.
+        println("¡Perdiste!")
+    } else {
+        // En cualquier otro caso, el usuario gana.
+        println("¡Ganaste!")
+    }
+}
 
 
 

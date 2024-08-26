@@ -49,6 +49,8 @@ fun realizarResta() {
     val num1 = readln().toDouble()
     println("Ingresa el segundo número:")
     val num2 = readln().toDouble()
-    val resultado = num2 - num1
+    val resultado = num1 - num2
     println("Resultado de la resta: $resultado")
+}
+fun main(){
 }

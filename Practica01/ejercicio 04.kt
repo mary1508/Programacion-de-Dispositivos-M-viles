@@ -2,10 +2,13 @@
 genera la computadora
 Autor: Marycielo Bedoya Pinto
 Fecha de creación: 25/08/2024
-Fecha de ultima modificacion:
+Fecha de ultima modificacion: 25/08/2024
  */
 import kotlin.random.Random
 
+fun main(){
+    jugar()
+}
 fun jugar() {
     // genera un número aleatorio entre 1 y 30.
     val numeroSecreto = Random.nextInt(1, 31)
@@ -31,5 +34,8 @@ fun jugar() {
                 println("El número secreto es mayor.")
             }
         }
+    }
+    if (!adivinado) {
+        println("¡Perdiste! Se acabaron los intentos. El número secreto era $numeroSecreto.")
     }
 }

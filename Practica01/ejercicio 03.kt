@@ -52,5 +52,23 @@ fun realizarResta() {
     val resultado = num1 - num2
     println("Resultado de la resta: $resultado")
 }
+fun realizarMultiplicacion() {
+    println("Ingresa el primer número:")
+    val num1 = readln().toDouble()
+    println("Ingresa el segundo número:")
+    val num2 = readln().toDouble()
+    val resultado = num1 * num2
+    println("Resultado de la multiplicación: $resultado")
+}
+
+fun realizarDivision() {
+    println("Ingresa el primer número:")
+    val num1 = readln().toDouble()
+    println("Ingresa el segundo número:")
+    val num2 = readln().toDouble()
+    val resultado = num1 / num2
+    println("Resultado de la división: $resultado")
+}
+
 fun main(){
 }

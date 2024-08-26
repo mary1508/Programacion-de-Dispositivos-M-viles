@@ -66,8 +66,12 @@ fun realizarDivision() {
     val num1 = readln().toDouble()
     println("Ingresa el segundo número:")
     val num2 = readln().toDouble()
-    val resultado = num1 / num2
-    println("Resultado de la división: $resultado")
+    if (num2 == 0.0) {
+        println("Error: No se puede dividir entre cero.")
+    } else {
+        val resultado = num1 / num2
+        println("Resultado de la división: $resultado")
+    }
 }
 
 fun main(){

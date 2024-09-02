@@ -21,7 +21,5 @@ El proyecto está compuesto por los siguientes ejercicios:
 
 ## Repositorio de GitHub
 
-Puedes acceder al repositorio de este proyecto en GitHub utilizando el siguiente enlace:
-
-[Enlace al Repositorio]()
+[Enlace al Repositorio](https://github.com/mary1508/Programacion-de-Dispositivos-M-viles.git)
 

@@ -38,3 +38,54 @@ class Revista(
 }
 
 data class Usuario(val nombre: String, val apellido: String, val edad: Int)
+
+interface IBiblioteca {
+    fun registrarMaterial(material: Material)
+    fun registrarUsuario(usuario: Usuario)
+    fun prestarMaterial(usuario: Usuario, material: Material)
+    fun devolverMaterial(usuario: Usuario, material: Material)
+    fun mostrarMaterialesDisponibles()
+    fun mostrarMaterialesReservadosPorUsuario(usuario: Usuario)
+}
+
+class Biblioteca : IBiblioteca {
+    private val materialesDisponibles = mutableListOf<Material>()
+    private val usuarios = mutableMapOf<Usuario, MutableList<Material>>()
+
+    override fun registrarMaterial(material: Material) {
+        materialesDisponibles.add(material)
+    }
+
+    override fun registrarUsuario(usuario: Usuario) {
+        usuarios[usuario] = mutableListOf()
+    }
+
+    override fun prestarMaterial(usuario: Usuario, material: Material) {
+        if (materialesDisponibles.contains(material)) {
+            usuarios[usuario]?.add(material)
+            materialesDisponibles.remove(material)
+            println("Material prestado: ${material.titulo} a ${usuario.nombre} ${usuario.apellido}")
+        } else {
+            println("Material no disponible.")
+        }
+    }
+
+    override fun devolverMaterial(usuario: Usuario, material: Material) {
+        if (usuarios[usuario]?.remove(material) == true) {
+            materialesDisponibles.add(material)
+            println("Material devuelto: ${material.titulo} por ${usuario.nombre} ${usuario.apellido}")
+        } else {
+            println("El usuario no tiene este material en préstamo.")
+        }
+    }
+
+    override fun mostrarMaterialesDisponibles() {
+        println("Materiales disponibles:")
+        materialesDisponibles.forEach { it.mostrarDetalles() }
+    }
+
+    override fun mostrarMaterialesReservadosPorUsuario(usuario: Usuario) {
+        println("Materiales reservados por ${usuario.nombre} ${usuario.apellido}:")
+        usuarios[usuario]?.forEach { it.mostrarDetalles() }
+    }
+}

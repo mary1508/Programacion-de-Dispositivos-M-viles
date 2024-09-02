@@ -89,3 +89,23 @@ class Biblioteca : IBiblioteca {
         usuarios[usuario]?.forEach { it.mostrarDetalles() }
     }
 }
+fun main() {
+    val biblioteca = Biblioteca()
+
+    val libro1 = Libro("Mi familia y otras miserias", "Orlando Mazeyra", 2013, "cuento", 155)
+    val revista1 = Revista("Vogue", "Varios", 2023, "0031-5850", 101, 2, "NGM")
+
+    val usuario1 = Usuario("Juan", "Alcachofa", 25)
+
+    biblioteca.registrarMaterial(libro1)
+    biblioteca.registrarMaterial(revista1)
+    biblioteca.registrarUsuario(usuario1)
+
+    biblioteca.mostrarMaterialesDisponibles()
+
+    biblioteca.prestarMaterial(usuario1, libro1)
+    biblioteca.mostrarMaterialesDisponibles()
+
+    biblioteca.devolverMaterial(usuario1, libro1)
+    biblioteca.mostrarMaterialesDisponibles()
+}

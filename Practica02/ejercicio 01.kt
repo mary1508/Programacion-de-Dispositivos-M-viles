@@ -17,6 +17,16 @@ class CuentaBancaria(private var saldo: Double, private var limiteRetiro: Double
             println("El saldo no puede ser negativo.")
         }
     }
-
+    // aqui realizamos el retiro que se pide
+    fun retirar(monto: Double) {
+        if (monto > limiteRetiro) {
+            println("El monto excede el límite de retiro.")
+        } else if (monto > saldo) {
+            println("Fondos insuficientes.")
+        } else {
+            saldo -= monto
+            println("Retiro exitoso. Saldo actual: $saldo")
+        }
+    }
 }
 

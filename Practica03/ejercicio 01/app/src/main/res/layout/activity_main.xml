@@ -9,12 +9,15 @@
         android:id="@+id/spinner_images"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/images_array" />
+        android:entries="@array/images_array"
+        android:prompt="@string/spinner_prompt" />
 
     <Button
         android:id="@+id/btn_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Siguiente" />
+        android:text="@string/btn_next"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="16dp" />
 
 </LinearLayout>

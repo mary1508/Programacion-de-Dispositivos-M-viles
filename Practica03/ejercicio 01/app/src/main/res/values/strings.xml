@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">ejercicio 01</string>
+    <string name="app_name">Mi Aplicación</string>
+    <string name="btn_next">Siguiente</string>
+    <string name="btn_back">Volver</string>
+    <string name="spinner_prompt">Selecciona una imagen</string>
+    <string name="image_default">Imagen por defecto</string>
+
+    <!-- Nombres de las imágenes para el Spinner -->
+    <string-array name="images_array">
+        <item>Imagen 1</item>
+        <item>Imagen 2</item>
+        <item>Imagen 3</item>
+    </string-array>
 </resources>

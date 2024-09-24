@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import com.example.ejercicio01.R
+import com.example.ejercicio01.SecondActivity
 
 class MainActivity : AppCompatActivity() {
 

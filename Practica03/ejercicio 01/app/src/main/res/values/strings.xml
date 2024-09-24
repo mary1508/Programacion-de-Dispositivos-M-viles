@@ -6,9 +6,7 @@
     <string name="image_default">Imagen por defecto</string>
 
     <!-- Nombres de las imágenes para el Spinner -->
-    <string-array name="images_array">
-        <item>Imagen 1</item>
-        <item>Imagen 2</item>
-        <item>Imagen 3</item>
-    </string-array>
+    <string name="image1">Imagen 1</string>
+    <string name="image2">Imagen 2</string>
+    <string name="image3">Imagen 3</string>
 </resources>

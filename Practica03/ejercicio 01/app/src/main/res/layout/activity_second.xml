@@ -9,12 +9,14 @@
         android:id="@+id/image_view"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:src="@drawable/default_image" />
+        android:contentDescription="@string/image_default" />
 
     <Button
         android:id="@+id/btn_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Volver" />
+        android:text="@string/btn_back"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="16dp" />
 
 </LinearLayout>

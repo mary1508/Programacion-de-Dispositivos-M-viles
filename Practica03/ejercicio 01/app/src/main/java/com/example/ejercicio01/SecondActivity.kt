@@ -1,3 +1,9 @@
+/* Descripción: Segunda actividad que muestra la imagen seleccionada en la primera actividad
+ además de un botón para volver a la primera actividad.
+Autor: Marycielo Guadalupe Bedoya Pinto
+Fecha de creación :23/09/2024
+Fecha de última modificación: 25/09/2024*/
+
 package com.example.ejercicio01
 
 import android.os.Bundle

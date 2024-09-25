@@ -1,3 +1,9 @@
+/* Descripción: Actividad principal que contiene el spinner para seleccionar las imagenes
+además de un botón para poder pasar a la siguiente actividad.
+Autor: Marycielo Guadalupe Bedoya Pinto
+Fecha de creación :20/09/2024
+Fecha de última modificación: 25/09/2024*/
+
 package com.example.ejercicio01
 
 import android.content.Intent

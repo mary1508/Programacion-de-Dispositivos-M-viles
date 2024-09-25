@@ -1,4 +1,4 @@
-package com.example.ejercicio1
+package com.example.ejercicio01
 
 import android.content.Intent
 import android.os.Bundle

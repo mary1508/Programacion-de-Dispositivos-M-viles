@@ -1,3 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ejercicio02</string>
+    <!-- Títulos y textos generales -->
+    <string name="app_name">Reproductor de Música</string>
+    <string name="selecciona_audio">Selecciona un audio</string>
+
+    <!-- Nombres de audios -->
+    <string name="audio1">How Deep Is Your Love - Bee Gees</string>
+    <string name="audio2">Idilio - Willie Colón</string>
+    <string name="audio3">Sad Girlz Luv Money - Amaarae ft Kali Uchis</string>
+    <string name="audio4">ALIBI - Sevdaliza ft. Pabllo Vittar and Yseult</string>
+    <string name="audio5">Virgen - Adolescentes</string>
+
+    <!-- Botones -->
+    <string name="btn_seleccionar">Seleccionar</string>
+    <string name="btn_reproducir">Reproducir</string>
+    <string name="btn_pausar">Pausar</string>
+    <string name="btn_detener">Detener</string>
 </resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReproductorActivity">
+
+    <ImageView
+        android:id="@+id/img_audio"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_audio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/img_audio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_reproducir"
+        app:layout_constraintTop_toBottomOf="@id/txt_audio"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_pausar"
+        app:layout_constraintTop_toBottomOf="@id/txt_audio"
+        app:layout_constraintStart_toEndOf="@id/btn_play"/>
+
+    <Button
+        android:id="@+id/btn_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_detener"
+        app:layout_constraintTop_toBottomOf="@id/txt_audio"
+        app:layout_constraintStart_toEndOf="@id/btn_pause"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,14 +9,19 @@ Fecha última modificación: 28/09/24
 
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.os.Handler
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.SeekBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class ReproductorActivity : AppCompatActivity() {
 
     private lateinit var mediaPlayer: MediaPlayer
+    private lateinit var seekBar: SeekBar
+    private lateinit var handler: Handler
+    private var runnable: Runnable? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +33,7 @@ class ReproductorActivity : AppCompatActivity() {
         // Obtener la referencia a los elementos UI
         val textAudio: TextView = findViewById(R.id.txt_audio)
         val imgAudio: ImageView = findViewById(R.id.img_audio)
+        seekBar = findViewById(R.id.seek_bar)
 
         // Array de nombres de audios y las imágenes asociadas
         val audios = arrayOf(
@@ -61,14 +67,36 @@ class ReproductorActivity : AppCompatActivity() {
         }
         mediaPlayer = MediaPlayer.create(this, audioResId)
 
-        // Botones para reproducir, pausar y detener la reproducción
-        val btnPlay: Button = findViewById(R.id.btn_reproducir)
-        val btnPause: Button = findViewById(R.id.btn_pausar)
-        val btnStop: Button = findViewById(R.id.btn_detener)
 
-        btnPlay.setText(R.string.btn_reproducir)
-        btnPause.setText(R.string.btn_pausar)
-        btnStop.setText(R.string.btn_detener)
+        // Configurar SeekBar
+        seekBar.max = mediaPlayer.duration
+
+        // Inicializar el Handler para actualizar el SeekBar
+        handler = Handler()
+
+        // Actualizar el SeekBar mientras el audio está reproduciéndose
+        runnable = Runnable {
+            seekBar.progress = mediaPlayer.currentPosition
+            handler.postDelayed(runnable!!, 1000)
+        }
+        handler.postDelayed(runnable!!, 1000)
+
+        // Configurar SeekBar para permitir avance/retroceso manual
+        seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                if (fromUser) {
+                    mediaPlayer.seekTo(progress)
+                }
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {}
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {}
+        })
+
+        // Botones para reproducir, pausar y detener la reproducción
+        val btnPlay: Button = findViewById(R.id.btn_play)
+        val btnPause: Button = findViewById(R.id.btn_pause)
+        val btnStop: Button = findViewById(R.id.btn_stop)
 
         btnPlay.setOnClickListener {
             mediaPlayer.start()
@@ -84,6 +112,7 @@ class ReproductorActivity : AppCompatActivity() {
             if (mediaPlayer.isPlaying) {
                 mediaPlayer.stop()
                 mediaPlayer.prepare()  // Prepara el MediaPlayer para ser reutilizado
+                seekBar.progress = 0
             }
         }
     }

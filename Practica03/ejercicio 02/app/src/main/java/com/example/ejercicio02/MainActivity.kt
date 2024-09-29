@@ -9,6 +9,8 @@ Fecha última modificación: 28/09/2024
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ImageView
@@ -50,8 +52,14 @@ class MainActivity : AppCompatActivity() {
         spinner.adapter = adapter
 
         // Listener para actualizar la imagen cuando se selecciona un audio en el Spinner
-        spinner.setOnItemSelectedListener { _, _, position, _ ->
-            imgAudio.setImageResource(audioImages[position])
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                imgAudio.setImageResource(audioImages[position])
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                // No es necesario hacer nada aquí si no lo necesitas
+            }
         }
 
         // Listener para el botón Seleccionar

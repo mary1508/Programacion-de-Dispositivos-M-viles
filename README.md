@@ -2,7 +2,7 @@
 # Proyecto de Ejercicios en Kotlin
 Este proyecto incluye una serie de ejercicios desarrollados en Kotlin para manejar conceptos fundamentales de programación orientada a objetos. Cada ejercicio se presenta como un script independiente, utilizando clases, herencia, interfaces, y abstracciones para resolver diferentes problemas.
 
-##**PRACTICA 02**
+## PRACTICA 02
 
 ## Descripción del Proyecto
 
@@ -20,10 +20,7 @@ El proyecto está compuesto por los siguientes ejercicios:
 4. **Sistema de Gestión de Biblioteca**:
    - Un sistema que incluye la gestión de materiales (como libros y revistas) y usuarios en una biblioteca. Se utiliza una interfaz `IBiblioteca` para definir operaciones comunes, y la clase `Biblioteca` implementa estas operaciones permitiendo registrar, prestar y devolver materiales.
 
-**PRÁCTICA 03**
-Aquí te presento un **README** actualizado y extendido para la **Práctica 03** del proyecto que incluye los nuevos ejercicios sobre el **Ciclo de Vida de una Actividad y Paso de Información** en Android con Kotlin.
-
----
+## PRÁCTICA 03
 
 # Proyecto de Ejercicios en Kotlin - Práctica 03
 

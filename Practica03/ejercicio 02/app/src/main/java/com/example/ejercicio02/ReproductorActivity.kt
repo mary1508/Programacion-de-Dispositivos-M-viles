@@ -22,6 +22,7 @@ class ReproductorActivity : AppCompatActivity() {
     private lateinit var seekBar: SeekBar
     private lateinit var handler: Handler
     private var runnable: Runnable? = null
+    private lateinit var backButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +35,7 @@ class ReproductorActivity : AppCompatActivity() {
         val textAudio: TextView = findViewById(R.id.txt_audio)
         val imgAudio: ImageView = findViewById(R.id.img_audio)
         seekBar = findViewById(R.id.seek_bar)
+        backButton = findViewById(R.id.back_button)
 
         // Array de nombres de audios y las imágenes asociadas
         val audios = arrayOf(
@@ -109,11 +111,19 @@ class ReproductorActivity : AppCompatActivity() {
         }
 
         btnStop.setOnClickListener {
+            
             if (mediaPlayer.isPlaying) {
                 mediaPlayer.stop()
                 mediaPlayer.prepare()  // Prepara el MediaPlayer para ser reutilizado
                 seekBar.progress = 0
             }
+        }
+
+        backButton.setOnClickListener {
+            mediaPlayer?.stop()
+            mediaPlayer?.release()
+            handler.removeCallbacks(runnable!!) // Detener la actualización de la barra de progreso
+            finish()
         }
     }
 
@@ -122,5 +132,6 @@ class ReproductorActivity : AppCompatActivity() {
         if (::mediaPlayer.isInitialized) {
             mediaPlayer.release()
         }
+        handler.removeCallbacks(runnable!!)
     }
 }

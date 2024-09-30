@@ -16,4 +16,5 @@
     <string name="btn_reproducir">Reproducir</string>
     <string name="btn_pausar">Pausar</string>
     <string name="btn_detener">Detener</string>
+    <string name="back_button">Volver</string>
 </resources>

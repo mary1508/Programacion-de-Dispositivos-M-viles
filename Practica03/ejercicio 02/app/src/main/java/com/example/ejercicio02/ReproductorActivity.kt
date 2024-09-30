@@ -4,7 +4,7 @@ package com.example.ejercicio02
 Descripción: Actividad para reproducir, pausar y detener el audio seleccionado, y mostrar su imagen asociada.
 Autor: Marycielo Bedoya Pinto
 Fecha creación: 28/09/24
-Fecha última modificación: 28/09/24
+Fecha última modificación: 30/09/24
 */
 
 import android.media.MediaPlayer

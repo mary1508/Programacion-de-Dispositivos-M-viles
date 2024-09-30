@@ -4,7 +4,7 @@ package com.example.ejercicio02
 Descripción: Actividad principal que permite seleccionar un audio de un Spinner, mostrar su imagen y pasar a la actividad de reproducción.
 Autor: Marycielo Bedoya Pinto
 Fecha creación: 28/09/2024
-Fecha última modificación: 28/09/2024
+Fecha última modificación: 30/09/2024
 */
 
 import android.content.Intent

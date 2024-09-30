@@ -1,9 +1,8 @@
 
 # Proyecto de Ejercicios en Kotlin
 Este proyecto incluye una serie de ejercicios desarrollados en Kotlin para manejar conceptos fundamentales de programación orientada a objetos. Cada ejercicio se presenta como un script independiente, utilizando clases, herencia, interfaces, y abstracciones para resolver diferentes problemas.
-**PRACTICA 02**
 
-Este proyecto incluye una serie de ejercicios desarrollados en Kotlin para manejar conceptos fundamentales de programación orientada a objetos. Cada ejercicio se presenta como un script independiente, utilizando clases, herencia, interfaces, y abstracciones para resolver diferentes problemas.
+##**PRACTICA 02**
 
 ## Descripción del Proyecto
 

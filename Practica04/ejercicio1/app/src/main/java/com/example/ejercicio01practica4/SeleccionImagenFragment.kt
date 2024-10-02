@@ -3,8 +3,8 @@ package com.example.ejercicio01practica4
 /*
 Descripción: Fragmento para la selección de imágenes en un spinner.
 Autor: Marycielo Guadalupe Bedoya Pinto
-Fecha creación: [Fecha de Creación]
-Fecha última modificación: [Fecha de Modificación]
+Fecha creación: 02/10/2024
+Fecha última modificación: 02/10/2024
 */
 
 import android.content.Context
@@ -30,7 +30,7 @@ class SeleccionImagenFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_seleccion_imagen, container, false)
 
         val spinner: Spinner = view.findViewById(R.id.spinner_imagenes)
-
+        nextButton = view.findViewById(R.id.next_button)
         // Nombres de las imágenes desde strings.xml
         val imagenes = arrayOf(
             getString(R.string.image1),

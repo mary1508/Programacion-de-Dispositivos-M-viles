@@ -5,6 +5,7 @@ Autor: Marycielo Guadalupe Bedoya Pinto
 Fecha creación:02/10/2024
 Fecha última modificación: 02/10/2024
 */
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -32,8 +33,14 @@ class MostrarImagenFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_mostrar_imagen, container, false)
+        return inflater.inflate(R.layout.fragment_mostrar_imagen, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         val imgMostrar: ImageView = view.findViewById(R.id.img_imagen)
+        backButton = view.findViewById(R.id.back_button) // Initialize backButton here
 
         val imagenIndex = arguments?.getInt(ARG_IMAGEN_INDEX) ?: 0
         val imagenResId = when (imagenIndex) {
@@ -42,12 +49,11 @@ class MostrarImagenFragment : Fragment() {
             2 -> R.drawable.image3
             else -> R.drawable.image1
         }
-        backButton.setOnClickListener {
-            // Navegar de vuelta al fragmento anterior (FragmentSpinner)
-            requireActivity().supportFragmentManager.popBackStack()
-        }
+
         imgMostrar.setImageResource(imagenResId)
 
-        return view
+        backButton.setOnClickListener {
+            requireActivity().supportFragmentManager.popBackStack()
+        }
     }
 }

@@ -22,18 +22,6 @@ class SeleccionImagenFragment : Fragment() {
     private var listener: OnImagenSeleccionadaListener? = null
     private lateinit var nextButton: Button
 
-    interface OnImagenSeleccionadaListener {
-        fun onImagenSeleccionada(imagenIndex: Int)
-    }
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        if (context is OnImagenSeleccionadaListener) {
-            listener = context
-        } else {
-            throw RuntimeException("$context debe implementar OnImagenSeleccionadaListener")
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -63,9 +51,21 @@ class SeleccionImagenFragment : Fragment() {
 
         return view
     }
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (context is OnImagenSeleccionadaListener) {
+            listener = context
+        } else {
+            throw RuntimeException("$context debe implementar OnImagenSeleccionadaListener")
+        }
+    }
 
     override fun onDetach() {
         super.onDetach()
         listener = null
+    }
+
+    interface OnImagenSeleccionadaListener {
+        fun onImagenSeleccionada(imagenIndex: Int)
     }
 }

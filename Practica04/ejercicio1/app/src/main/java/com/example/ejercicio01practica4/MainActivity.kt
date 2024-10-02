@@ -2,9 +2,9 @@ package com.example.ejercicio01practica4
 
 /*
 Descripción: Actividad principal que coordina los fragmentos para seleccionar y mostrar imágenes.
-Autor: [Tu Nombre]
-Fecha creación: [Fecha de Creación]
-Fecha última modificación: [Fecha de Modificación]
+Autor: Marycielo Guadalupe Bedoya Pinto
+Fecha creación: 02/10/2024
+Fecha última modificación: 02/10/2024
 */
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

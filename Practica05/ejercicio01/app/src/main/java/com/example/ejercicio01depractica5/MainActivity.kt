@@ -2,9 +2,9 @@ package com.example.ejercicio01depractica5
 
 /*
 Descripción: Actividad principal que gestiona el contenedor de fragmentos y carga la lista de audios.
-Autor: [Tu Nombre]
-Fecha creación: [Fecha de Creación]
-Fecha última modificación: [Fecha de Modificación]
+Autor: Marycielo Guadalupe Bedoya Pinto
+Fecha creación: 02/10/2024
+Fecha última modificación: 03/10/2024
 */
 
 import android.os.Bundle

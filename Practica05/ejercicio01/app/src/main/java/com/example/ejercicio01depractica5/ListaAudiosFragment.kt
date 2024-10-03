@@ -1,8 +1,8 @@
 /*
 Descripción: Fragmento que contiene el RecyclerView para listar los audios.
-Autor: [Tu Nombre]
-Fecha creación: [Fecha de Creación]
-Fecha última modificación: [Fecha de Modificación]
+Autor: Marycielo Guadalupe Bedoya Pinto
+Fecha creación: 02/10/2024
+Fecha última modificación: 03/10/2024
 */
 package com.example.ejercicio01depractica5
 import android.os.Bundle

@@ -2,9 +2,9 @@ package com.example.ejercicio01depractica5
 
 /*
 Descripción: Fragmento para controlar la reproducción de un audio.
-Autor: [Tu Nombre]
-Fecha creación: [Fecha de Creación]
-Fecha última modificación: [Fecha de Modificación]
+Autor: Marycielo Guadalupe Bedoya Pinto
+Fecha creación:02/10/2024
+Fecha última modificación: 03/10/2024
 */
 import android.media.MediaPlayer
 import android.os.Bundle

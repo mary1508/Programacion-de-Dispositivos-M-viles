@@ -1,10 +1,8 @@
-package com.example.ejercicio01depractica5
-
 /*
 Descripción: Fragmento que contiene el RecyclerView para listar los audios.
-Autor: Marycielo Bedoya Pinto
-Fecha creación: 03/10/2024
-Fecha última modificación:  03/10/2024
+Autor: [Tu Nombre]
+Fecha creación: [Fecha de Creación]
+Fecha última modificación: [Fecha de Modificación]
 */
 
 import android.os.Bundle
@@ -20,6 +18,7 @@ class ListaAudiosFragment : Fragment(), AudioAdapter.OnItemClickListener {
     private lateinit var recyclerView: RecyclerView
     private lateinit var audioAdapter: AudioAdapter
 
+    // Crear la vista del fragmento
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -27,8 +26,9 @@ class ListaAudiosFragment : Fragment(), AudioAdapter.OnItemClickListener {
         val view = inflater.inflate(R.layout.fragment_lista_audios, container, false)
 
         recyclerView = view.findViewById(R.id.recycler_view)
-        recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerView.layoutManager = LinearLayoutManager(context)  // Configurar layout vertical
 
+        // Crear la lista de audios
         val audios = listOf(
             Audio("How Deep Is Your Love", R.drawable.imagen1, "3:32", R.raw.audio1),
             Audio("Idilio", R.drawable.imagen2, "4:21", R.raw.audio2),
@@ -37,15 +37,17 @@ class ListaAudiosFragment : Fragment(), AudioAdapter.OnItemClickListener {
             Audio("Virgen", R.drawable.imagen5, "4:08", R.raw.audio5)
         )
 
-        audioAdapter = AudioAdapter(audios, this)
+        audioAdapter = AudioAdapter(audios, this)  // Configurar adaptador
         recyclerView.adapter = audioAdapter
 
         return view
     }
 
+    // Manejar la selección de un ítem
     override fun onItemClick(audio: Audio) {
         val reproductorFragment = ReproductorFragment.newInstance(audio)
 
+        // Cambiar al fragmento de reproducción al hacer clic en un audio
         parentFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, reproductorFragment)
             .addToBackStack(null)

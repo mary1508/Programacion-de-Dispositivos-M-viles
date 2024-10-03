@@ -74,5 +74,10 @@ Este repositorio contiene la resolución de los ejercicios de la Práctica 4 sob
 - Garantizar que la música continúe reproduciéndose y el estado del reproductor se conserve tras rotar la pantalla.
 - Usar `FragmentTransaction` para gestionar las transiciones entre los fragments, como la lista de canciones y el reproductor.
 
+## PRACTICA 5
+
+-En está practica se implementa sobre el reproductor de música usando fragments un recyclerview para el manejo de todos los datos de cada canción mostrandose en la primera interfaz realizada
+
+
 [Enlace al Repositorio](https://github.com/mary1508/Programacion-de-Dispositivos-M-viles.git)
 

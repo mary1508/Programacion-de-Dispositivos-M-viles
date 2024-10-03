@@ -22,8 +22,6 @@ El proyecto está compuesto por los siguientes ejercicios:
 
 ## PRÁCTICA 03
 
-# Proyecto de Ejercicios en Kotlin - Práctica 03
-
 Este proyecto incluye una serie de ejercicios desarrollados en Kotlin, centrándose en el **ciclo de vida de una actividad** y el **paso de información entre actividades** en Android. Los ejercicios se desarrollan utilizando Android Studio, y cada uno aborda problemas clave relacionados con la interacción de usuario, manejo de imágenes y reproducción de audio.
 
 ## Descripción del Proyecto
@@ -55,8 +53,26 @@ Este ejercicio permite seleccionar un audio de una lista y reproducirlo en una s
 - Implementación de la clase `MediaPlayer` para cargar y reproducir los audios seleccionados.
 - Manejo del ciclo de vida de la actividad para pausar o detener el audio cuando la actividad cambia de estado (por ejemplo, cuando el usuario cambia de actividad o minimiza la aplicación).
  
+## PRACTICA 4
 
-## Repositorio de GitHub
+Este repositorio contiene la resolución de los ejercicios de la Práctica 4 sobre el uso de Fragments en aplicaciones Android utilizando Kotlin. Los ejercicios requieren modificar las aplicaciones previas de "Interacción con Imágenes" y "Reproductor de Música" para implementarlas usando Fragments, asegurando que la interfaz y la lógica funcionen correctamente incluso cuando se rota el dispositivo.
+
+## Ejercicios
+
+### 1. Interacción con Imágenes versión Fragments
+
+**Instrucciones:**
+- Modificar la aplicación original para reemplazar las actividades por fragments.
+- Asegurar que el estado de la imagen y otros datos persistan al rotar la pantalla.
+- Implementar el `FragmentManager` para manejar la interacción entre los fragments y la actividad principal.
+
+
+### 2. Reproductor de Música versión Fragments
+
+**Instrucciones:**
+- Modificar la aplicación original del reproductor de música para implementar fragments.
+- Garantizar que la música continúe reproduciéndose y el estado del reproductor se conserve tras rotar la pantalla.
+- Usar `FragmentTransaction` para gestionar las transiciones entre los fragments, como la lista de canciones y el reproductor.
 
 [Enlace al Repositorio](https://github.com/mary1508/Programacion-de-Dispositivos-M-viles.git)
 

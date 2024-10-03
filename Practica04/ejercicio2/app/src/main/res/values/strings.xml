@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">ejercicio2-practica4</string>
+    <!-- General -->
+    <string name="app_name">Reproductor de Música</string>
+    <string name="selecciona_cancion">Selecciona una canción</string>
+
+    <!-- Nombres de las canciones -->
+    <string name="cancion1">How Deep Is Your Love - Bee Gees</string>
+    <string name="cancion2">Idilio - Willie Colón</string>
+    <string name="cancion3">Sad Girlz Luv Money - Amaarae ft Kali Uchis</string>
+    <string name="cancion4">ALIBI - Sevdaliza</string>
+    <string name="cancion5">Virgen - Adolescentes</string>
+
+    <!-- Botones -->
+    <string name="btn_seleccionar">Seleccionar</string>
+    <string name="btn_reproducir">Reproducir</string>
+    <string name="btn_pausar">Pausar</string>
+    <string name="btn_detener">Detener</string>
 </resources>

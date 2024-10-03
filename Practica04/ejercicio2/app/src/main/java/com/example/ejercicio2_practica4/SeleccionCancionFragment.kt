@@ -2,9 +2,9 @@ package com.example.ejercicio2_practica4
 
 /*
 Descripción: Fragmento para la selección de canciones en un Spinner.
-Autor: [Tu Nombre]
-Fecha creación: [Fecha]
-Fecha última modificación: [Fecha]
+Autor: Marycielo Guadalupe Bedoya Pinto
+Fecha creación: 02/10/2024
+Fecha última modificación: 02/10/2024
 */
 
 import android.content.Context
@@ -60,7 +60,7 @@ class SeleccionCancionFragment : Fragment() {
 
         // Cambiar la imagen según selección
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+            override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 val imagenResId = when (position) {
                     0 -> R.drawable.image_audio1
                     1 -> R.drawable.image_audio2
